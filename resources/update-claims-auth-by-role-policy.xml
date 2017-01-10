@@ -4,7 +4,7 @@
         <AnyOf>
             <AllOf>
                 <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">USER_STORE_DOMAIN</AttributeValue>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">ACME.COM</AttributeValue>
                     <AttributeDesignator AttributeId="http://wso2.org/identity/user/user-store-domain" Category="http://wso2.org/identity/user" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true">
                     </AttributeDesignator>
                 </Match>
@@ -19,7 +19,7 @@
     <Rule Effect="Permit" RuleId="allow-if-in-admin">
         <Condition>
             <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-is-in">
-                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">USER_STORE_DOMAIN/admin</AttributeValue>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">ACME.COM/admin</AttributeValue>
                 <AttributeDesignator AttributeId="http://wso2.org/claims/role" Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true">
                 </AttributeDesignator>
             </Apply>
